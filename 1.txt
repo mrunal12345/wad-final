@@ -1,0 +1,47 @@
+Name: Mrunal Bansod
+Roll No:07
+
+
+
+Linux and Ruby basics:
+
+1. Describe the following Linux Commands:
+
+1. pwd: In Unix-like and some other operating systems, the pwd command (print working directory) writes the full pathname of the current working directory to the standard output.
+
+2. top: The Linux top command is used to show all the running processes within your Linux environment.
+
+3. less: Less is a program similar to more, but which allows backward movement in the file as well as forward movement. Also, less does not have to read the entire input file before starting, so with large input files it starts up faster than text editors like vi .
+
+4. man: man is the system's manual viewer; it can be used to display manual pages, scroll up and down, search for occurrences of specific text, and other useful functions.
+
+5. chmod: chmod changes the permissions of each given file according to mode, where mode describes the permissions to modify. Mode can be specified with octal numbers or with letters.
+
+2. Difference between chmod a+x vs 755:
+      chmod a+x will add the exec bits to the file but will not touch other bits. For example file        might be still unreadable to others and group.
+chmod 755 will always make the file with perms 755 no matter what initial permissions were.
+3. Describe REPL:
+   A Read–Eval–Print Loop (REPL), also known as an interactive toplevel or language shell, is a simple, interactive computer programming environment that takes single user inputs (i.e. single expressions), evaluates them, and returns the result to the user; a program written in a REPL environment is executed piecewise. The term is most usually used to refer to programming interfaces similar to the classic Lisp machine interactive environment. Common examples include command line shells and similar environments for programming languages, and is particularly characteristic of scripting languages.
+4. Iterators in Ruby:
+Iterators are not an original concept with ruby. They are in common use in object-oriented languages. They are also used in Lisp, though there they are not called iterators.
+Example:
+#!/bin/sh
+
+for i in *.[ch]; do
+  # ... here would be something to do for each file
+done
+
+5. Write a ruby program to overload ‘+’ operator:
+
+overloading :
+	class Tester1
+	 def initialize x
+	   @x = x
+	 end
+	 def +(y)
+	   @x.to_s + y.to_s
+	 end
+	end
+	a = Tester1.new 11.to_s
+	puts(a+22)
+

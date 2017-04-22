@@ -1,0 +1,39 @@
+Install Ruby using RVM:
+
+1. What rvm used for?
+Not only does RVM make installing multiple ruby interpreters / runtimes easy and consistent, it provides features such as gemsets that aren't typically supported out of the box on most ruby installs.
+	RVM also lets you use different rubies in a manner that won't mess with your existing ruby 	install (unless you tell it to) as well as letting you run multiple different rubies in separate 	terminals concurrently!
+2. What is ‘#’?
+
+3.   Ruby program to find n’th number in fibonacci series:
+def fibonacci( n )
+  return  n  if ( 0..1 ).include? n
+  ( fibonacci( n - 1 ) + fibonacci( n - 2 ) )
+end
+puts fibonacci( 8 )
+            
+            output:
+            mrunal@mrunal-HP-15-Notebook-PC:~/Desktop$ ruby hi.rb
+            21 
+
+4. Ruby program to solve josephus problem:
+def josephus(size, steps, survivors = 2)
+  list = *1..size
+
+  def list.[](i)
+    fetch(i % length)
+  end
+
+  puts "Population #{list.length}, #{steps} steps, #{survivors} survivors"
+
+  while list.length > survivors
+    list.delete(list[steps-1])
+    list.rotate!(steps-1)
+  end
+
+  puts "Position of survivors: #{list}"
+end
+
+puts josephus(6,2)
+
+
